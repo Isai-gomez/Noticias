@@ -3,10 +3,10 @@ const Noticia = props => {
   const { urlToImage, url, title, description, source } = props.noticia;
 
   return (
-    <div className="row s10 m6 l10">
-      <div className="card">
+    <div className="row">
+      <div className="card panel">
         <div className="card-image">
-          <img src={urlToImage} alt={title} />
+          <img className="responsive-img circle" src={urlToImage} alt={title} />
           <span className="card-title">{source.name}</span>
         </div>
         <div className="card-content">
