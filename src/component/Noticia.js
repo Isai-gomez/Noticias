@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 const Noticia = props => {
   const { urlToImage, url, title, description, source } = props.noticia;
 
@@ -25,6 +26,16 @@ const Noticia = props => {
       </div>
     </div>
   );
+};
+
+Noticia.propTypes = {
+  noticia: PropTypes.shape({
+    urlToImage: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    source: PropTypes.object.isRequired
+  })
 };
 
 export default Noticia;

@@ -14,7 +14,6 @@ class App extends Component {
     this.consutaNoticia();
   }
   consutaNoticia = (categoria = "general") => {
-    console.log(categoria);
     let url = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apiKey=127b7ec038b4407b954a1f5606cf9f70`;
     fetch(url)
       .then(respuesta => {
