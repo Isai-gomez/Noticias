@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Noticias from "./Noticias";
+import Formulario from "./Formulario";
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends Component {
       <div className="contenedor-app">
         <Header titulo={"Noticias"}></Header>
         <div className="container white contenedor-noticias">
+          <Formulario></Formulario>
           <Noticias noticias={this.state.noticias}></Noticias>
         </div>
       </div>

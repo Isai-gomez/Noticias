@@ -3,8 +3,8 @@ const Noticia = props => {
   const { urlToImage, url, title, description, source } = props.noticia;
 
   return (
-    <div className="row">
-      <div className="card panel">
+    <div className="col s12 m12 l6">
+      <div className="card panel ">
         <div className="card-image">
           <img className="responsive-img circle" src={urlToImage} alt={title} />
           <span className="card-title">{source.name}</span>
