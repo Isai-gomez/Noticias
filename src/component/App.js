@@ -13,7 +13,8 @@ class App extends Component {
   componentDidMount() {
     this.consutaNoticia();
   }
-  consutaNoticia = () => {
+  consutaNoticia = categoria => {
+    console.log(categoria);
     let url =
       "https://newsapi.org/v2/top-headlines?country=mx&category=general&apiKey=127b7ec038b4407b954a1f5606cf9f70";
     fetch(url)
@@ -31,7 +32,7 @@ class App extends Component {
       <div className="contenedor-app">
         <Header titulo={"Noticias"}></Header>
         <div className="container white contenedor-noticias">
-          <Formulario></Formulario>
+          <Formulario categoria={this.consutaNoticia}></Formulario>
           <Noticias noticias={this.state.noticias}></Noticias>
         </div>
       </div>
